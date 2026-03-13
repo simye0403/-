@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  
+  --color-brand-orange: #FF6600;
+  --color-brand-black: #000000;
+  --color-brand-dark: #121212;
+  --color-brand-grey: #1E1E1E;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-black text-white font-sans antialiased;
+  }
+}
+
+.glow-orange {
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.3);
+}
+
+.glow-orange-hover:hover {
+  box-shadow: 0 0 25px rgba(255, 102, 0, 0.5);
+  border-color: #FF6600;
+}
+
+.glass-card {
+  @apply bg-brand-dark/80 backdrop-blur-md border border-white/10;
+}
